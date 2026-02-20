@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Інтерактивний калькулятор</title>
+</head>
+<body>
+
+    <h2>Інтерактивний калькулятор</h2>
+
+    <input type="number" id="a" placeholder="Нумеро уно">
+    <input type="number" id="b" placeholder="Нумеро дос">
+
+    <br>
+
+    <button onclick="plus()">+</button>
+    <button onclick="minus()">−</button>
+    <button onclick="mnozh()">*</button>
+    <button onclick="del()">/</button>
+    <button onclick="clearAll()">Очистити</button>
+
+    <p id="result">Результат:</p>
+
+    <script>
+        function plus() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            document.getElementById("result").innerText = "Результат: " + (a + b);
+        }
+
+        function minus() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            document.getElementById("result").innerText = "Результат: " + (a - b);
+        }
+
+        function mnozh() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            document.getElementById("result").innerText = "Результат: " + (a * b);
+        }
+
+        function del() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            
+            if (b === 0) {
+                document.getElementById("result").innerText = "На нуль не ділиться";
+            } else {
+                document.getElementById("result").innerText = "Результат: " + (a / b);
+            }
+        }
+        function clearAll() {
+            document.getElementById("a").value = "";
+            document.getElementById("b").value = "";
+            document.getElementById("result").innerText = "Результат:";
+        }
+    </script>
+</body>
+</html>
