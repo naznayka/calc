@@ -5,8 +5,37 @@
     <title>Інтерактивний калькулятор</title>
 </head>
 <body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
 
-    <h2>Інтерактивний калькулятор</h2>
+    h2 {
+        margin-bottom: 5%;
+    }
+
+    input {
+        padding: 1%;
+        margin: 1%;
+        width: 10%;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 2% 2%;
+        margin: 1%;
+        font-size: 16px;
+    }
+
+    #result {
+        margin-top: 2%;
+        font-weight: bold;
+        font-size: 18px;
+    }
+</style>
+    <h2>Калькулятор</h2>
 
     <input type="number" id="a" placeholder="Нумеро уно">
     <input type="number" id="b" placeholder="Нумеро дос">
@@ -45,7 +74,7 @@
             let b = Number(document.getElementById("b").value);
             
             if (b === 0) {
-                document.getElementById("result").innerText = "На нуль не ділиться";
+                document.getElementById("result").innerText = "Я тєбя умножу на ноль";
             } else {
                 document.getElementById("result").innerText = "Результат: " + (a / b);
             }
